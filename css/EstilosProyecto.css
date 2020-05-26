@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.contenedor{ 
+    width: 100%;
+    margin: 0;
+    /* Flex */
+    /* display: table-column; */
+    display: -webkit-flex;
+    display: -ms-flexbox;
+        display: flex;
+        /* flex-flow: column wrap; */
+        flex-flow: row wrap;
+}
+.menu-fixed{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+header{
+    width: 100%;
+    padding: 0;
+    /* Flex*/
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#menuContainer{
+    width: 100%;
+	}
+ul#menu a:hover, ul#menu ul, ul#menu li:hover{
+	background:	rgba(53, 127, 212, 0.904);
+	color:rgb(255, 255, 255);
+	} 
+ul#menu a{
+	color:rgb(255, 255, 255);
+	text-decoration:none;
+	padding:15px;
+	display:block;
+	}
+.CuerpoIndex{
+   background-color: rgb(113, 67, 156);
+}
+.cuerpoRegistro{
+    background-color: rgb(221, 173, 230);
+}
+.cuerpoInicio{
+    background-color: rgb(204, 187, 154);
+}
+.AgregarPaciente{
+    background-color: rgb(228, 133, 241);
+}
+.cuerpoAzul{
+    background-color: lightskyblue;
+}
+.cuerpoVerde{
+    background-color: rgb(202, 233, 146);
+}
+.cuerpoRosa{
+    background-color: rgb(177, 143, 204);
+}
+.box h1{
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+   text-align: center;
+}
+.box h3{
+    color: white;
+}
+.box a{
+    color: #2eaccc;
+    font-size: medium;
+    text-decoration: none;
+}
+.box a:hover{
+    color: #f0f0f0;
+}
+.box{
+    width: 30%;
+    padding: 3%;
+    margin: 10% 2% 2% 3%;
+    background:rgba(51, 51, 51, 0.836);
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+   display: flex;
+   flex-flow: column wrap;
+   justify-content: center;
+   z-index: 2;
+   align-items: center;
+}
+.box ::placeholder{
+    color: rgb(250, 250, 250);
+    }
+.box input[type="email"],.box input[type="password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 5% auto;
+    text-align: center;
+    border: 3px solid #3498db;
+    padding: 8% 11%;
+    width: 100%;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box input[type="email"]:focus,.box input[type="password"]:focus{
+    width: 105%;
+    border-color: #c920c9;
+}
+.box input[type="submit"]{
+    width: 90%;
+    border: 0;
+    background: #cc7a2e;
+    display: block;
+    margin: 11% auto;
+    text-align: center;
+    border: 2px solid #cc7a2e;
+    padding: 6% 9%;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.box input[type="submit"]:hover{
+background: #cc682e;
+}
+.Acerca p{
+color: azure;
+/* font-size: 150%; */
+font-family: 'Times New Roman', Times, serif;
+}
+.Acerca h1{
+    color: azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-weight: 500;
+    font-size: 15vh; */
+}
+#imgCa{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+}
+#PieHome{
+    background: rgba(0, 0, 0, 0.568);
+text-align: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* font-size: 25px; */
+    color: rgb(250, 250, 250);
+    width: 100%;
+}
+.main{
+    padding: 20px;
+    /* Flex */
+    /* display: -webkit-flex;
+    display: -ms-flexbox; */
+    flex: 1 1 70%;
+}
+.datosP{
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+.main .formulario{
+margin: 50px auto;
+}
+.main article{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000;
+}
+.main article:nth-last-child(1){ /* estilo para el Ultimo elemento */
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+aside{
+    background-color: rgb(137, 191, 204);
+    padding: 20px;
+    /* Flex */
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex: 1 1 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    /* flex: 0 0 300px; */
+}
+aside .widget{
+    background-color: rgb(221, 173, 230);
+    height: 210px;
+    margin: 10px;
+    /* overflow:hidden; */
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.contenedor2{
+/* margin-top: 9%; */
+margin-top: 5%;
+}
+.ID{
+    display: none;
+}
+footer{
+    width: 100%;
+    /* padding: 10px; */
+    bottom: 0;
+    /* Flex */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+aside .wid{
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+}
+.pdf{
+ /* margin-right: 5mm; */
+ height: 100mm;
+    width: 90mm; 
+    background-color: rgb(255, 254, 254);
+    overflow: hidden;
+}
+.pieRe{
+    background: rgba(0, 0, 0, 0.568);
+    width: 100%;
+    position: relative;
+margin-top: 0%;
+}
+.textoR{
+    font-size: 60%;
+}
+.Firma{
+    margin-top: 42%;
+    font-size: 60%;
+    font-weight: 300;
+    /* background-color: coral; */
+}
+.datosPacienteR{
+    position: relative;
+height: 32mm;
+display: block;
+background-color: rgba(127, 255, 212, 0.315);
+overflow: hidden;
+}
+.pdf h1{
+    font-size: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.datosPacienteR h2{
+    font-size: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+}
+.datosPacienteR h3{
+    font-size: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+}
+.datosPacienteR h4{
+    font-size:50%;
+    font-family: cursive;
+    text-align: left;
+}
+.datosPacienteR h5{
+    font-size: 50%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+}
+@media screen and (max-width: 1099px){
+    .contenedor2{
+        /* margin-top: 9%; */
+        margin-top: 7%;
+        }
+}
+@media screen and (max-width: 850px){
+    .box h1{
+        font-size: 180%;
+    }
+    #imgCa{
+        height:auto;
+        position: relative;
+    }
+    .contenedor{
+        flex-direction: column;
+    }
+    .box{
+        width: 60%;
+    margin: 1%;
+    margin-top: 5%;
+    }
+    .box input[type="email"],.box input[type="password"]{
+            margin: 3% auto;
+            padding: 6% 8%;
+        }
+        .box input[type="email"]:focus,.box input[type="password"]:focus{
+            width: 105%;
+        }
+        .box input[type="submit"]{
+            width: 75%;
+            margin: 9% auto;
+            padding: 4% 5%;
+        }
+        .box h1{
+            font-weight: 280;
+        }
+        aside{
+            flex-direction: row;
+            flex: 0;
+            /* padding: 0; */
+        }
+        aside .widget{
+            flex-grow: 1;
+        }
+        .contenedor2{
+            margin-top: 10%;
+            padding: 0; 
+        }
+        .main{
+            padding: 0;
+        }
+        aside .wid{
+            flex-grow: 1;
+            padding: 0;
+            margin-left: 2px;
+        }
+}
+@media screen and (max-width: 600px){
+    aside{
+        flex-direction: column;
+    }
+    footer{
+        justify-content: space-around;
+    }
+    .contenedor2{
+        margin-top: 18%; 
+    }
+}

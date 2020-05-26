@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/EstilosProyecto.css">
+    <link rel="icon" href="../imagenes/ManzanaAzul.png">
+</head>
+<body class="cuerpoRegistro">
+    <div class="contenedor">
+        <header>
+            <nav id="menuContainer" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                    <a class="navbar-brand" href="#">Opciones</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul id="menu" class="navbar-nav">
+                        <li class="nav-item active"><a class="nav-link" id="VinculoMenu" href="../index.html">Inicio<span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="registrarse.html">Registrarse</a></li>
+                        </ul>
+                    </div>
+            </nav>
+        </header>
+        <section class="main">
+            <div class="formulario container w-40 h-30" >
+                <div class="container mt-5" id="aviso">
+                    
+                </div>
+                <form class="form-horizontal" id="formulario">
+                    <input type="hidden" id="CRegistrar" value="RegUsu">
+                    <h1>Registrarse</h1>
+                    <div class="form-group">
+                    <!-- <label class="control-label" for="usuario">Nombre de usuario: </label>
+                    <input class="form-control" type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
+                </div> -->
+                <div class="form-group">
+                    <label class="control-label" for="nombre">Nombre completo: </label>
+                    <div class="form-inline">
+                <label class="sr-only" for="nombre">Nombre: </label>
+                <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre(s)" autofocus required>
+                <label class="sr-only" for="APT">Apellido Paterno: </label>
+                <input class="form-control" type="text" id="APT" name="APT" placeholder="Apellido Paterno" required>
+                <label class="sr-only" for="APM">Apellido Materno: </label>
+                <input class="form-control" type="text" id="APM" name="APM" placeholder="Apellido Materno" required>
+            </div>
+            </div>
+                    <div class="form-group">
+                <label class="control-label" for="cedula">Cedula: </label>
+                    <input class="form-control" type="text" id="cedula" name="cedula" placeholder="Cedula" required>
+                </div>
+                <div class="form-group">
+                <label class="control-label" for="correo">Correo Electronico:</label> 
+                    <input class="form-control" type="email" name="correo" id="correo" placeholder="E-mail" required>
+                </div>
+                <div class="form-group">
+                <label class="control-label" for="pass">Contraseña:</label>
+                    <input class="form-control" id="pass" type="password" name="pass" placeholder="&#128272; password" required>
+                </div>
+                    <input class="btn btn-primary" type="submit" name="" value="Registrarse">
+                    <input class="btn btn-primary " type="reset" value="Limpiar">
+                   <h4>¿Ya tienes Una cuenta?</h4> <a href="../index.html">&nbsp;Iniciar Sesion</a>
+                </form>
+            </div>
+        </section>
+        <footer id="PieHome">
+            <img width="50ppx" height="50px"  src="../Imagenes/nutricion1.png" class="imag-fluid" alt="Responsive image">
+            <h1>
+                NutriSystem
+            </h1>
+        Herramienta para nutriologos
+            </footer>
+            <script src="../js/jquery-3.5.0.min.js"></script>
+            <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/coneccion.js"></script>
+    </div>
+</body>
+</html>

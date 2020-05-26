@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script >
+            if (!sessionStorage.getItem("User")) {
+                self.location="../";
+            }else if (sessionStorage.getItem('estatus')==='Inactivo') {
+        self.location="verMPac.html";
+        }
+        </script>
+        <title>Nueva Receta</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/EstilosProyecto.css">
+        <link rel="icon" href="../imagenes/ManzanaAzul.png"> 
+    </head>
+    <body class="cuerpoRegistro">
+        <div class="contenedor">
+            <header>
+                <nav id="menuContainer" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                    <a class="navbar-brand" href="#">Opciones</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul id="menu" class="navbar-nav"> 
+                            <li class="nav-item active"><a class="nav-link" id="VinculoMenu" href="inicio.html">Inicio<span class="sr-only">(current)</span></a></li>
+                            <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="historial.html">Historial</a></li>
+                            <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="NotasConsulta.html">Notas de Consulta</a></li>
+                            <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="Recetas.html">Recetas</a></li>
+                            <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="../js/cerrarSesion.js">Cerrar Sesion</a></li>
+                        </ul>
+                    </div>
+            </nav>
+            </header>
+            <section class="main contenedor2">
+                <div class="container mt-5" id="aviso">
+                    
+                </div>
+                <article class="container datosP">
+                <h1>Nueva Receta</h1>
+                <!-- <h2><script>document.write(sessionStorage.getItem("IDP")); </script></h2> -->
+                <form class="form-horizontal" id="formulario">
+                    <input type="hidden" id="CRegistrar" value="RegRec">
+             <div id="pacienteCN" class="form-group">
+                 <label class="control-label" for="paciente">Paciente:</label> 
+                 <select id="NombreP" class="form-control" name="NombreP">
+                            
+                </select>
+                     </div>
+                 <div class="form-group">
+                 <label class="control-label" for="AnotacionesR">Receta</label> 
+                 <textarea class="form-control" name="AnotacionesR" rows="7" id="AnotacionesR" placeholder="Notas de consulta"></textarea>           
+                 </div>
+                 <input class="btn btn-primary btn-lg" type="submit" name="" value="Crear Receta">
+                 <input class="btn btn-primary btn-lg" type="reset" value="Limpiar">
+             </form>
+                </article>
+         </section>
+         <aside id="contenedor" class="contenedor2">
+             <div id="opcionesC" class="widget bg-warning">
+                    <div id="opc">
+                <a class="btn btn-dark  m-1 d-block" href="verMPac.html"><i><img class="imag-fluid" src="../Imagenes/User.png" width="30px" height="30px"></i> Datos Paciente</a>
+                 <a name="Paciente" id="btnElimina" class="btn btn-dark  m-1 d-block" href="historial.html"><i><img class="imag-fluid" src="../Imagenes/eliminar_usuario.png" width="30px" height="30px"></i> Eliminar</a>
+                 <a class="btn btn-dark  m-1 d-block" href="editarP.html"><i><img class="imag-fluid" src="../Imagenes/editar_usuario.png" width="30px" height="30px"></i> Editar</a>
+                <a class="btn btn-dark d-block m-1" href="verNotasP.html"><i><img class="imag-fluid" src="../Imagenes/folder.png" width="30px" height="30px"></i> Ver Notas</a>
+                    </div>
+             </div>
+             <!-- <div id="forAn" class="widget">
+                <form id="anotations" action="#" class="form-horizontal">
+                    <div class="form-group">
+                <label class="control-label m-2" for="anotaciones">Anotaciones:</label>
+                <textarea class="form-control" name="Anotaciones" id="anotaciones" placeholder="Observaciones"></textarea> 
+                    </div>
+                    <input id="botonG" required class="btn btn-success m-2" type="submit" value="Guardar">
+            </form>
+            </div>
+            <div id="comentarios" class="wid">
+                
+            </div> -->
+         </aside> 
+         <footer id="PieHome">
+             <img width="50ppx" height="50px"  src="../Imagenes/nutricion1.png" class="imag-fluid" alt="Responsive image">
+                 <h1>
+                     NutriSystem
+                 </h1>
+             Herramienta para nutriologos
+             </footer>
+            <script src="../js/jquery.js"></script>
+            <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/popper.min.js"></script>
+            <script src="../js/editaNC.js"></script>
+            <script src="../js/agregaComentarios.js"></script>
+            <script src="../js/MisScripts.js"></script> 
+            <script src="../js/coneccion.js"></script>
+            <script src="../js/Elimina.js"></script>
+        </div>
+    </body>
+    </html>
+    

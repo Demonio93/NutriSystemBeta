@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script >
+        if (!sessionStorage.getItem("User")) {
+            self.location="../";
+        }
+    </script>
+    <title>Agregar Paciente</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/EstilosProyecto.css">
+    <link rel="icon" href="../imagenes/ManzanaAzul.png">
+</head>
+<body class="AgregarPaciente">
+    <div class="contenedor">
+        <header>
+            <nav id="menuContainer" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <a class="navbar-brand" href="#">Opciones</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul id="menu" class="navbar-nav">
+                        <li class="nav-item active"><a class="nav-link" id="VinculoMenu" href="inicio.html">Inicio<span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="historial.html">Historial</a></li>
+                        <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="NotasConsulta.html">Notas de Consulta</a></li>
+                        <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="Recetas.html">Recetas</a></li>
+                        <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="../js/cerrarSesion.js">Cerrar Sesion</a></li>
+                    </ul>
+                </div>
+        </nav>
+        </header>
+        <section class="main contenedor2">
+           <article>
+            <div class="container w-40 h-30">
+                <div class="container mt-5" id="aviso">
+                    
+                </div>
+                    <form class="form-horizontal" id="formulario">
+                        <input type="hidden" id="CRegistrar" value="RegPac">
+                        <h1>Registrar Paciente</h1>
+                        <div class="form-group">
+                            <label class="control-label" for="nombre">Nombre completo: </label>
+                            <div class="form-inline">
+                        <label class="sr-only" for="nombre">Nombre: </label>
+                        <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre del paciente" autofocus required>
+                        <label class="sr-only" for="APT">Apellido Paterno: </label>
+                        <input class="form-control" type="text" id="APT" name="APT" placeholder="Apellido Paterno" required>
+                        <label class="sr-only" for="APM">Apellido Materno: </label>
+                        <input class="form-control" type="text" id="APM" name="APM" placeholder="Apellido Materno" required>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="edad">Peso y talla: </label>
+                        <div class="form-inline">
+                        <input class="form-control" type="number" id="edad" name="edad" placeholder="Edad" required>
+                        <label class="sr-only" for="peso">Peso: </label>
+                            <input class="form-control" type="number" id="peso" name="peso" placeholder="Peso en kilogramos" required>
+                            <label class="sr-only" for="Estatura">Estatura: </label>
+                            <input class="form-control" type="number" id="estatura" name="estatura" placeholder="estatura en metros" required>
+                            <label class="sr-only" for="talla">Talla: </label>
+                            <input class="form-control" type="number" id="talla" name="talla" placeholder="Talla en centimetros" required>
+                        </div>
+                        </div>
+                    <div class="form-group">
+                    <label class="control-label" for="correo">Datos del Paciente:</label> 
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="correo">Correo Electronico:</label>
+                        <input class="form-control" type="emailP" name="correo" id="correo" placeholder="E-mail">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="estadoC">Estado Civil:</label> 
+                                <select class="form-control" name="estadoC" id="estadoC">
+                                    <option value="soltero">Estado Civil</option>
+                                    <option value="soltero">Solter@</option>
+                                    <option value="casado">Casad@</option>
+                                    <option value="Divorciado">Divorciad@</option>
+                                    <option value="viudo">Viud@</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="numeroT">Numero Telefonico:</label> 
+                        <input class="form-control" type="number" name="numeroT" id="numeroT" placeholder="Numero Telefonico" required>
+                    </div>
+                                </div>
+                                </div>
+                    <div class="form-group">
+                        <label class="control-label" for="genero">Genero: </label>
+                        <div class="form-inline">
+                    <input class="form-control" type="radio" id="genero" name="genero" value="Hombre" required>Hombre
+                      <input class="form-control" type="radio" id="genero" name="genero" value="Mujer"required>Mujer
+                    </div>
+                        </div> 
+                        <div class="form-group">
+                        <label class="control-label" for="fechaN">Fecha de Nacimiento:</label> 
+                        <input class="form-control" placeholder="Fecha de Nacimiento" type="date" name="fechaN" id="fechaN" required>            
+                        </div>
+                        <input class="btn btn-primary btn-lg" type="submit" name="" value="Registrar">
+                        <input class="btn btn-primary btn-lg" type="reset" value="Limpiar">
+                    </form>
+            </div>
+           </article>
+        </section>
+        <aside id="contenedor" class="contenedor2">
+            <div class="widget">
+                <a class="btn btn-dark btn-lg m-3 d-block" href="historial.html"><i><img class="imag-fluid" src="../Imagenes/Reservacion.png" width="40px" height="40px"></i> Historial</a><br>
+                <a class="btn btn-dark btn-lg m-3 d-block" href="AgergarPaciente.html"><i><img class="imag-fluid" src="../Imagenes/Registrarse.png" width="40px" height="40px"></i>Agregar Paciente</a>
+            </div>
+            <!-- <div id="forAn" class="widget">
+                <form id="anotations" action="#" class="form-horizontal">
+                    <div class="form-group">
+                <label class="control-label m-2" for="anotaciones">Anotaciones:</label>
+                <textarea class="form-control" name="Anotaciones" id="anotaciones" placeholder="Observaciones"></textarea>
+                    </div>
+                    <input id="botonG" required class="btn btn-success m-2" type="submit" value="Guardar">
+            </form>
+            </div>
+            <div id="comentarios" class="wid">
+                
+            </div> -->
+        </aside>
+        <footer id="PieHome">
+            <img width="50ppx" height="50px"  src="../Imagenes/nutricion1.png  " class="imag-fluid" alt="Responsive image">
+            <h1>
+                NutriSystem
+            </h1>
+        Herramienta para nutriologos
+        <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/agregaComentarios.js"></script>
+        <script src="../js/coneccion.js"></script>
+    </div>
+</body>
+</html>

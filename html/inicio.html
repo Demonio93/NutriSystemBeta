@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script >
+        if (!sessionStorage.getItem("User")) {
+            self.location="../";
+        }
+    </script>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/EstilosProyecto.css">
+    <link rel="icon" href="../imagenes/ManzanaAzul.png">
+<link rel="stylesheet" type="text/css" href="../Imagenes/engine1/style.css" />
+<!-- <script type="text/javascript" src="../Imagenes/engine1/jquery.js"></script> -->
+<script src="../js/jquery-3.5.0.min.js"></script>
+<script src="../js/main.js"></script> 
+</head>
+<body class="cuerpoInicio">
+    <div class="contenedor">
+        <header>
+            <div class="galeria">
+                <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+    <div class="ws_images"><ul>
+            <li><img src="../Imagenes/data1/images/600x400_nutricionistock770.jpg" alt="" title="" id="wows1_0"/></li>
+            <li><img src="../Imagenes/data1/images/1534344859_950598_1534345069_noticia_normal.jpg" alt="" title="" /></li>
+            <li><img src="../Imagenes/data1/images/descarga_1.jpg" alt="" title="" id="wows1_2"/></li>
+            <li><img src="../Imagenes/data1/images/descarga.jpg" alt="" title="" id="wows1_3"/></li>
+            <li><img src="../Imagenes/data1/images/dietaweb.jpg" alt="" title="" id="wows1_4"/></li>
+            <li><img src="../Imagenes/data1/images/escuelade_nutricion_requisitos_.jpg" alt="" title="" /></li>
+            <li><img src="../Imagenes/data1/images/fitmitos.png" alt="" title="" id="wows1_6"/></li>
+            <li><img src="../Imagenes/data1/images/img_ysaiz_20190426131918_imagenes_lv_terceros_istock927760476kkgbu4618704075163hd992x558lavanguardiaweb.jpg" alt="carousel slider" title="" id="wows1_7"/></li>
+            <li><img src="../Imagenes/data1/images/nutricionclinica.jpg" alt="" title="" id="wows1_8"/></li>
+        </ul></div>
+        <div class="ws_bullets"><div>
+            <a href="#" title=""><span><img src="../Imagenes/data1/tooltips/600x400_nutricionistock770.jpg" alt=""/>1</span></a>
+            <a href="#" title=""><span><img src="../Imagenes/data1/tooltips/1534344859_950598_1534345069_noticia_normal.jpg" alt=""/>2</span></a>
+            <a href="#" title=""><span><img src="../Imagenes/data1/tooltips/descarga_1.jpg" alt=""/>3</span></a>
+            <a href="#" title=""><span><img src="../Imagenes/data1/tooltips/descarga.jpg" alt=""/>4</span></a>
+            <a href="#" title=""><span><img src="../Imagenes/data1/tooltips/dietaweb.jpg" alt=""/>5</span></a>
+            <a href="#" title=""><span><img src="../Imagenes/data1/tooltips/escuelade_nutricion_requisitos_.jpg" alt=""/>6</span></a>
+            <a href="#" title=""><span><img src="../Imagenes/data1/tooltips/fitmitos.png" alt=""/>7</span></a>
+            <a href="#" title=""><span><img src="../Imagenes/data1/tooltips/img_ysaiz_20190426131918_imagenes_lv_terceros_istock927760476kkgbu4618704075163hd992x558lavanguardiaweb.jpg" alt=""/>8</span></a>
+            <a href="#" title=""><span><img src="../Imagenes/data1/tooltips/nutricionclinica.jpg" alt=""/>9</span></a>
+        </div></div>
+    <div class="ws_shadow"></div>
+    </div>	
+    <script type="text/javascript" src="../Imagenes/engine1/wowslider.js"></script>
+    <script type="text/javascript" src="../Imagenes/engine1/script.js"></script>
+    <!-- End WOWSlider.com BODY section -->
+            </div>
+            <nav id="menuContainer" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top MenuI">
+                <a class="navbar-brand" href="#">Opciones</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul id="menu" class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" id="VinculoMenu" href="inicio.html">Inicio<span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="historial.html">Historial</a></li>
+                        <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="NotasConsulta.html">Notas de Consulta</a></li>
+                        <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="Recetas.html">Recetas</a></li>
+                        <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="../js/cerrarSesion.js">Cerrar Sesion</a></li>
+                    </ul>
+                </div>
+                <form class="form-inline my-2 my-lg-0">
+                    <input type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar tarea">
+                    <!-- <button class="btn btn-success my-2 my-sm-0" type="submit">
+                        Buscar
+                    </button> -->
+                </form>
+        </nav>
+        </header>
+        <section class="main">
+            <div class="container m-2" id="aviso">
+
+            </div>          
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card bg-warning">
+                            <div class="card-body">
+                                <h1 class="d-inline">Anotaciones</h1>
+                                    <img class="imag-fluid" src="../Imagenes/recetas1.png" width="20%" height="33%">
+                                <form id="formulario">
+                                    <input type="hidden" id="CRegistrar"> 
+                                    <div class="form-group">
+                                        <input type="text" id="name" placeholder="Nombre de tarea" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea autofocus id="description" name="description" cols="30" rows="10" class="form-control" placeholder="Escriba Anotaciones aqui"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-dark btn-block text-center"><i><img class="imag-fluid" src="../Imagenes/palom.png" width="30px" height="30px"></i>Guardar Anotacion</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card my-4" id="task-result">
+                            <div class="card-body">
+                                <ul id="container"></ul>
+                            </div>
+                        </div>
+                        <table class="table table-bordered table-sm table-striped table-hover bg-warning">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nombre</th>
+                                    <th>Anotacion</th>
+                                    <th>Fecha y Hora</th>
+                                    <th>Operaciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tasks">
+            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            </article>
+        </section>
+        <footer id="PieHome">
+            <img width="50ppx" height="50px"  src="../Imagenes/nutricion1.png " class="imag-fluid" alt="Responsive image">
+            <h1>
+                NutriSystem
+            </h1>
+        Herramienta para nutriologos
+            </footer>
+        
+        <!-- <script src="../js/jquery.js"></script> -->
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/Anotaciones.js"></script>
+        <!-- <script src="../js/coneccion.js"></script> -->
+    </div>
+</body>
+</html>

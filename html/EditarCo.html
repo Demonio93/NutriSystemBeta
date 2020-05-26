@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script >
+        if (!sessionStorage.getItem("User")) {
+            self.location="../";
+        }
+    </script>
+    <title>Editar Consulta</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/EstilosProyecto.css">
+    <link rel="icon" href="../imagenes/ManzanaAzul.png">
+</head>
+<body class="cuerpoVerde">
+    <div class="contenedor">
+        <header>
+            <nav id="menuContainer" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <a class="navbar-brand" href="#">Opciones</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul id="menu" class="navbar-nav">
+                        <li class="nav-item active"><a class="nav-link" id="VinculoMenu" href="inicio.html">Inicio<span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="historial.html">Historial</a></li>
+                        <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="NotasConsulta.html">Notas de Consulta</a></li>
+                        <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="Recetas.html">Recetas</a></li>
+                        <li class="nav-item"><a class="nav-link" id="VinculoMenu" href="../js/cerrarSesion.js">Cerrar Sesion</a></li>
+                    </ul>
+                </div>
+        </nav>
+        </header>
+        <section class="main contenedor2">
+               <article class="container datosP">
+               <h1>Editar Consulta</h1>
+               <div class="container mt-5" id="aviso">
+                    
+            </div>
+               <form id="formulario" class="form-horizontal">
+                <input type="hidden" id="CEditar" value="EdCon">
+            <div id="pacienteCN"class="form-group">
+                <label class="control-label" for="paciente">Paciente:</label> 
+                 <input type="text" readonly id="NombreP" class="form-control" name="NombreP">
+            </div>
+                <div class="form-group">
+                <label class="control-label" for="anotacionesC">Notas:</label> 
+                <textarea class="form-control" name="anotacionesC" rows="7" id="anotacionesC" placeholder="Notas de consulta" autofocus></textarea>           
+                </div>
+                <input class="btn btn-primary btn-lg" type="submit" name="" value="Actualizar Consulta">
+                <input class="btn btn-primary btn-lg" type="reset" value="Limpiar">
+            </form>
+               </article>
+        </section>
+        <aside id="contenedor" class="contenedor2">
+            <div class="widget bg-warning">
+                <a id="botonPa" class="btn btn-dark  m-1 d-block" href="CrearNC.html"><i><img class="imag-fluid" src="../Imagenes/icono-mas-png-8.png" width="30px" height="30px"></i> Crear Consulta</a>
+                <a name="Consulta" id="btnElimina"class="btn btn-dark  m-1 d-block" href="NotasConsulta.html"><i><img class="imag-fluid" src="../Imagenes/eliminar_usuario.png" width="30px" height="30px"></i> Eliminar</a>
+                <a id="edit" class="btn btn-dark  m-1 d-block active" href="EditarCo.html"><i><img class="imag-fluid" src="../Imagenes/folder.png" width="30px" height="30px"></i> Editar</a>
+                <a class="btn btn-dark  m-1 d-block" href="verMPac.html"><i><img class="imag-fluid" src="../Imagenes/historial1.png" width="30px" height="30px"></i> Sobre Paciente</a>
+            </div>
+            <!-- <div id="forAn" class="widget">
+                <form id="anotations" action="#" class="form-horizontal">
+                    <div class="form-group">
+                <label class="control-label m-2" for="anotaciones">Anotaciones:</label>
+                <textarea class="form-control" name="Anotaciones" id="anotaciones" placeholder="Observaciones"></textarea>
+                    </div>
+                    <input id="botonG" required class="btn btn-success m-2" type="submit" value="Guardar">
+            </form>
+            </div>
+            <div id="comentarios" class="wid">
+                
+            </div> -->
+        </aside>
+        <footer id="PieHome">
+            <img width="50ppx" height="50px"  src="../Imagenes/nutricion1.png" class="imag-fluid" alt="Responsive image">
+                <h1>
+                    NutriSystem
+                </h1>
+            Herramienta para nutriologos
+            </footer>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <!-- <script src="../js/editaNC.js"></script> -->
+        <script src="../js/agregaComentarios.js"></script>
+        <script src="../js/MisScripts.js"></script>
+        <script src="../js/PasarID.js"></script>
+        <script src="../js/Edita.js"></script>
+        <script src="../js/Elimina.js"></script>
+    </div> 
+</body>
+</html>
