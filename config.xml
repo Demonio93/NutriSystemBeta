@@ -12,14 +12,17 @@ Herramienta para nutriologos por Susana Hernandez Guzman
 Susana Hernandez Guzman
 </author>
 <icon src="icon.png"/>
+    
 <preference name="orientation" value="portrait" />
-<plugin name="cordova-plugin-whitelist" />
+  
+<plugin name="cordova-plugin-whitelist"/>
 <access origin="https://nutrisystem.000webhostapp.com/php/*" />
-<allow-intent href="http://*/*" />
-<allow-intent href="https://*/*" />
 
-<platform name="android">
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-</platform>
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  
+  <platform name="android">
+      <allow-intent href="http://*/*" />
+      <allow-intent href="https://*/*" />
+  </platform>
 </widget>
