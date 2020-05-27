@@ -28,6 +28,8 @@
     formulario.addEventListener('submit', function (e) {
         e.preventDefault();
         var datos=new FormData(formulario);
+        datos.append('email', sessionStorage.getItem('User'));
+        datos.append('Usuario', sessionStorage.getItem('Usuario'));
         fetch(url,{
             method: 'POST',
             body: datos
@@ -49,7 +51,7 @@
                     sessionStorage.setItem('IdR', respuesta.IdR);
                     self.location='../html/Receta.html';
                 }
-                url='../php/';
+                url='https://nutrisystem.000webhostapp.com/php/';
                 showMessage(respuesta.message, 'success');
             }else{
                 showMessage(respuesta.message, 'danger');

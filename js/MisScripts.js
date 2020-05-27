@@ -1,5 +1,7 @@
 (function(){
   try {
+    var email=sessionStorage.getItem("User");
+    var Usuario=sessionStorage.getItem("Usuario");
     if (sessionStorage.getItem('estatus')==='Inactivo') {
       document.getElementById('botonPa').remove();
       document.getElementById('edit').remove();
@@ -20,6 +22,8 @@
             if (confirm('¿Estas seguro que quieres dar de alta al paciente?')) {
                 var datos=new FormData();
                 datos.append('IDRe', sessionStorage.getItem('IdHP'));
+                datos.append('email', email);
+            datos.append('Usuario', Usuario);
                 var pagina='../html/verMPac.html';
                 fetch('https://nutrisystem.000webhostapp.com/php/AltaPac.php',{
                     method: 'POST',

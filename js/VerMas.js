@@ -1,4 +1,6 @@
 (function (){
+    var email=sessionStorage.getItem("User");
+    var Usuario=sessionStorage.getItem("Usuario");
     var CVM=document.getElementById('CVM').value;
     if (CVM==='HPaciente') {
         // sessionStorage.setItem('estatus', '');
@@ -26,6 +28,8 @@
     }
     function VerPaciente() {
         var datos=new FormData();
+        datos.append('email', email);
+            datos.append('Usuario', Usuario);
         datos.append('IDRe', sessionStorage.getItem('IdHP'));
         fetch('https://nutrisystem.000webhostapp.com/php/UnPaciente.php', {
             method: 'POST',
@@ -114,6 +118,8 @@ if (res.ok) {
         sessionStorage.setItem('ID','botonPa');
         datos.append('IDPC', sessionStorage.getItem('IdPC'));
         datos.append('IDUC', sessionStorage.getItem('IdUC'));
+        datos.append('email', email);
+            datos.append('Usuario', Usuario);
         // console.log(sessionStorage.getItem('IdUC'));
         fetch('https://nutrisystem.000webhostapp.com/php/UnConsulta.php', {
             method: 'POST',
@@ -132,6 +138,7 @@ if (res.ok) {
                     if(consulta.success==1){
                         sessionStorage.setItem('IdHP', consulta.IdP);
                         sessionStorage.setItem('estatus', consulta.status);
+                        
                         // console.log(sessionStorage.getItem('IdHP'));
                         template+=`
                         <h1>Consulta Numero: ${sessionStorage.getItem('IdC')}</h1>
@@ -155,6 +162,8 @@ if (res.ok) {
     function VerReceta() {
         var datos=new FormData();
         datos.append('IDR', sessionStorage.getItem('IdR'));
+        datos.append('email', email);
+        datos.append('Usuario', Usuario);
         fetch('https://nutrisystem.000webhostapp.com/php/UnReceta.php', {
             method: 'POST',
             body: datos
@@ -220,6 +229,8 @@ if (res.ok) {
                 if (confirm('¿Estas seguro que quieres dar de alta al paciente?')) {
                     var datos=new FormData();
                     datos.append('IDRe', sessionStorage.getItem('IdHP'));
+                    datos.append('email', email);
+                    datos.append('Usuario', Usuario);
                     var pagina='../html/verMPac.html';
                     fetch('https://nutrisystem.000webhostapp.com/php/AltaPac.php',{
                         method: 'POST',

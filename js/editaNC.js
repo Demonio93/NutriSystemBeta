@@ -1,5 +1,6 @@
 (function (){
-
+    var email=sessionStorage.getItem("User");
+    var Usuario=sessionStorage.getItem("Usuario");
     var id=sessionStorage.getItem("ID");
     // console.log(id);
         if(id=='botonPa'){
@@ -11,8 +12,11 @@
             consultaPacientes();
         } 
         function ConsultaUPac() {
+           
             var datos=new FormData();
             datos.append('IDRe', sessionStorage.getItem('IdHP'));
+            datos.append('email', email);
+            datos.append('Usuario', Usuario);
             fetch('https://nutrisystem.000webhostapp.com/php/UnPaciente.php', {
                 method: 'POST',
                 body: datos
@@ -37,8 +41,12 @@
             });
         }
        function consultaPacientes(){
+        var datos=new FormData();
+        datos.append('email', email);
+        datos.append('Usuario', Usuario);
             fetch('https://nutrisystem.000webhostapp.com/php/ShHisto.php', {
-                method: 'GET'
+                method: 'POST',
+                body: datos
             }).then(
                 res=>{
     if (res.ok) {

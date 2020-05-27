@@ -1,5 +1,7 @@
 (function(){
 try {
+    var email=sessionStorage.getItem("User");
+        var Usuario=sessionStorage.getItem("Usuario");
         $(document).on('click', '#btnElimina', function (e) {
             e.preventDefault();
             var url='https://nutrisystem.000webhostapp.com/php/';
@@ -17,6 +19,8 @@ try {
                 datos.append('RPC', sessionStorage.getItem('IdPC'));
                 pagina+='NotasConsulta.html';
             }
+            datos.append('email', email);
+            datos.append('Usuario', Usuario);
             fetch(url,{
                 method: 'POST',
                 body: datos

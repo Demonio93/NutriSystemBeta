@@ -6,7 +6,7 @@
         formulario.addEventListener('submit',function (e) {
             e.preventDefault();
             var datos=new FormData(formulario);
-            url='php/IniciarSesion.php';
+            url='https://nutrisystem.000webhostapp.com/php/IniciarSesion.php';
             fetch(url,{
                 method: 'POST',
                 body: datos
@@ -22,6 +22,7 @@
                 if(respuesta.success==1){
                     formulario.reset();
                 sessionStorage.setItem("User", respuesta.email);
+                sessionStorage.setItem("Usuario", respuesta.Id_Usuario);
                 self.location='html/inicio.html';
                 }else{
                     showMessage(respuesta.message, 'danger');
@@ -78,6 +79,8 @@
         function MostrarHistorialCV(valor) {
             var datos=new FormData();
         datos.append('consulta', valor);
+        datos.append('email', sessionStorage.getItem('User'));
+        datos.append('Usuario', sessionStorage.getItem('Usuario'));
             fetch('https://nutrisystem.000webhostapp.com/php/ShH.php', {
                 method: 'POST',
                 body: datos
@@ -117,8 +120,12 @@
         }
         function MostrarHistorial() {
             // sessionStorage.removeItem('estatus')
+            var datos=new FormData();
+            datos.append('email', sessionStorage.getItem('User'));
+            datos.append('Usuario', sessionStorage.getItem('Usuario'));
             fetch('https://nutrisystem.000webhostapp.com/php/ShHisto.php', {
-                method: 'POST'
+                method: 'POST',
+                body: datos
             }).then(
                 res=>{
     if (res.ok) {
@@ -164,6 +171,8 @@
            function MostrarConsultaCV(valor){
             var datos=new FormData();
         datos.append('consulta', valor);
+        datos.append('email', sessionStorage.getItem('User'));
+        datos.append('Usuario', sessionStorage.getItem('Usuario'));
             fetch('https://nutrisystem.000webhostapp.com/php/ShC.php', {
                 method: 'POST',
                 body: datos
@@ -203,8 +212,12 @@
             });
            }
         function  MostrarConsulta(){
+            var datos=new FormData();
+            datos.append('email', sessionStorage.getItem('User'));
+            datos.append('Usuario', sessionStorage.getItem('Usuario'));
             fetch('https://nutrisystem.000webhostapp.com/php/ShConsulta.php', {
-                method: 'GET'
+                method: 'POST',
+                body: datos
             }).then(
                 res=>{
     if (res.ok) {
@@ -250,6 +263,8 @@
             function  MostrarRecetasCV(valor) {
                 var datos=new FormData();
                 datos.append('consulta', valor);
+                datos.append('email', sessionStorage.getItem('User'));
+                datos.append('Usuario', sessionStorage.getItem('Usuario'));
                     fetch('https://nutrisystem.000webhostapp.com/php/ShR.php', {
                         method: 'POST',
                         body: datos
@@ -287,8 +302,12 @@
                 });
             }
         function  MostrarRecetas(){
+            var datos=new FormData();
+            datos.append('email', sessionStorage.getItem('User'));
+            datos.append('Usuario', sessionStorage.getItem('Usuario'));
             fetch('https://nutrisystem.000webhostapp.com/php/ShRecetas.php', {
-                method: 'GET'
+                method: 'POST',
+                body: datos
             }).then(
                 res=>{
     if (res.ok) {
@@ -333,6 +352,8 @@
                 var datos=new FormData();
                 datos.append('IDPC', sessionStorage.getItem('IdHP'));
                 datos.append('consulta', valor);
+                datos.append('email', sessionStorage.getItem('User'));
+                datos.append('Usuario', sessionStorage.getItem('Usuario'));
                     fetch('https://nutrisystem.000webhostapp.com/php/ShCP.php', {
                         method: 'POST',
                         body: datos
@@ -371,6 +392,8 @@
             function MostrarCUP() {
                 var datos=new FormData();
             datos.append('IDPC', sessionStorage.getItem('IdHP'));
+            datos.append('email', sessionStorage.getItem('User'));
+            datos.append('Usuario', sessionStorage.getItem('Usuario'));
                 fetch('https://nutrisystem.000webhostapp.com/php/ShConsultaP.php', {
                     method: 'POST',
                     body: datos

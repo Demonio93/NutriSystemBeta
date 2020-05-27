@@ -1,16 +1,19 @@
 $(function () {
      // console.log('JQuery is working');
      let edit=false;
+     let email=sessionStorage.getItem("User");
+     let Usuario=sessionStorage.getItem("Usuario");
      $('#task-result').hide();
      MostrarDatos();
      $('#search').keyup(function (e) {
          if ($('#search').val()) {
              let search=$('#search').val();
+             
          // console.log(search);
          $.ajax({
              url: 'https://nutrisystem.000webhostapp.com/php/buscarNotas.php',
              type: 'POST',
-             data: {search},
+             data: {search, email, Usuario},
              success: function (response) {
                 //  console.log(response);
                  let tasks=JSON.parse(response);
@@ -44,7 +47,8 @@ $(function () {
          const postData={
              nombre: $('#name').val(),
              descripcion: $('#description').val(),
-             id: $('#CRegistrar').val()
+             id: $('#CRegistrar').val(),
+             Usuario: Usuario
          };
          let url= edit === false ? 'https://nutrisystem.000webhostapp.com/php/RegAnot.php' : 'https://nutrisystem.000webhostapp.com/php/task-edit.php';
          // console.log(url);
@@ -60,7 +64,8 @@ $(function () {
     function MostrarDatos() {
      $.ajax({
          url:'https://nutrisystem.000webhostapp.com/php/lista.php',
-         type:'GET',
+         type:'POST',
+         data: {email, Usuario},
          // data:{ nombre: 'susan' },
          success: function (response) {
             //   console.log(response);
@@ -95,7 +100,7 @@ $(function () {
          let element =$(this)[0].parentElement.parentElement;
      let idR=$(element).attr('taskIdR');
      // console.log(id);
-     $.post('https://nutrisystem.000webhostapp.com/php/task-delete.php', {idR}, function (response) {
+     $.post('https://nutrisystem.000webhostapp.com/php/task-delete.php', {idR, email, Usuario}, function (response) {
          console.log(response);
          MostrarDatos();
      });
@@ -108,7 +113,7 @@ $(function () {
     //  console.log($(this)[0].parentElement);
      let id=$(element).attr('taskIdA');
     //  console.log(id);
-     $.post('https://nutrisystem.000webhostapp.com/php/task-single.php', { id }, function (response) {
+     $.post('https://nutrisystem.000webhostapp.com/php/task-single.php', { id, Usuario, email }, function (response) {
         edit=true;
          const task = JSON.parse(response);
          $('#name').val(task.Nombre_Anotacion);

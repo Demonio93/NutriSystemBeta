@@ -1,7 +1,9 @@
 (function () {
-    mostrar();
+    var email=sessionStorage.getItem("User");
+    var Usuario=sessionStorage.getItem("Usuario");
     var formulario=document.getElementById('formulario');
     var decide=document.getElementById('CEditar').value;
+    mostrar();
     var url='https://nutrisystem.000webhostapp.com/php/', dato;
     // var datos=new FormData(formulario);
     if (decide==='EdPac') {
@@ -18,6 +20,8 @@
         e.preventDefault();
         var datos=new FormData(formulario);
         datos.append('ID', dato);
+        datos.append('email', email);
+        datos.append('Usuario', Usuario);
         fetch(url,{
             method: 'POST',
             body: datos
@@ -59,6 +63,8 @@
     function mostrar() {
         var decide=document.getElementById('CEditar').value;
         var datos=new FormData();
+        datos.append('email', email);
+        datos.append('Usuario', Usuario);
         var url='https://nutrisystem.000webhostapp.com/php/', dato, b;
         if (decide==='EdPac') {
             dato=sessionStorage.getItem('IdHP');
